@@ -1,0 +1,4 @@
+- ganti type jadi file
+- e.target.file,console.log dulu
+- body pake form data
+https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData
