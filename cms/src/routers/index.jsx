@@ -9,7 +9,7 @@ import EditArticle from "../views/EditArticle";
 import Categories from "../views/Categories";
 import EditImage from "../views/EditImage";
 import AddUser from "../views/AddUser";
-const url = localUrl;
+const url = gcpUrl;
 
 const router = createBrowserRouter([
   {

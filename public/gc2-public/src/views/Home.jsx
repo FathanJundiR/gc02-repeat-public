@@ -23,7 +23,7 @@ export default function Home({ url }) {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `${localUrl}/pub/articles?search=${searching}&limit=8&page[size]=8&page[number]=${page}&sort=${sort}&filter=${
+        `${gcpUrl}/pub/articles?search=${searching}&limit=8&page[size]=8&page[number]=${page}&sort=${sort}&filter=${
           filter !== 0 ? filter : ""
         }`
       );
@@ -48,7 +48,7 @@ export default function Home({ url }) {
 
   async function fetchCategories() {
     try {
-      const { data } = await axios.get(`${localUrl}/pub/categories`);
+      const { data } = await axios.get(`${gcpUrl}/pub/categories`);
       setCategories(data.categories);
     } catch (error) {
       console.log(error);

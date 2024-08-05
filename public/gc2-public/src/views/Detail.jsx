@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { localUrl, gcpUrl } from "../utils/baseUrl";
+import { gcpUrl } from "../utils/baseUrl";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,7 +15,7 @@ export default function Detail() {
   async function fetchArticleDetail() {
     try {
       setLoading(true);
-      const { data } = await axios.get(`${localUrl}/pub/articles/${id}`);
+      const { data } = await axios.get(`${gcpUrl}/pub/articles/${id}`);
       setArticleDetail(data.article);
       console.log(data);
     } catch (error) {
